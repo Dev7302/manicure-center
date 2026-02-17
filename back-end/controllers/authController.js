@@ -35,7 +35,12 @@ const register = async (req, res) => {
 
   if (!nome || !email || !senha) {
     return res.status(400).json({ erro: "Nome, email e senha são obrigatórios" });
+    if (err) {
+  console.error('❌ Erro detalhado:', err);
+  // ...
+}
   }
+  console.log('📝 Dados recebidos:', { nome, email, telefone, senha });
 
   const hash = await bcrypt.hash(senha, 10);
 
