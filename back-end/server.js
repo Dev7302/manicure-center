@@ -7,16 +7,8 @@ const agendamentoRoutes = require("./routes/agendamentoRoutes");
 const app = express();
 
 // Configuração CORS explícita para aceitar seu front-end
-app.use(cors({
-    origin: [
-        'https://manicure-center.vercel.app',
-        'https://manicure-center-git-main-enzofrangiotte-7296s-projects.vercel.app',
-        'https://manicure-center-hy8hwn9wf-enzofrangiotte-7296s-projects.vercel.app'
-    ],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true
-}));
+app.use(cors({ origin: '*' }));
+
 
 
 // Alternativa para teste (permitir todas as origens)
