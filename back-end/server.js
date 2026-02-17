@@ -8,7 +8,10 @@ const app = express();
 
 // Configuração CORS explícita para aceitar seu front-end
 app.use(cors({
-    origin: 'https://manicure-center-onik.vercel.app',
+    origin: [
+        'https://manicure-center-onik.vercel.app',
+        'https://manicure-center-onik-2z1st89np-enzofrangiotte-7296s-projects.vercel.app'
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
