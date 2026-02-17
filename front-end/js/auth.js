@@ -1,5 +1,5 @@
 // auth.js
-const API_URL = 'https://manicure-center.up.railway.app/api';
+const API_URL = 'https://manicure-center-production.up.railway.app/api';
 
 function showMessage(elementId, message, isError = true) {
     const el = document.getElementById(elementId);
