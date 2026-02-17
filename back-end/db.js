@@ -1,5 +1,3 @@
-console.log("🔎 Todas as variáveis de ambiente disponíveis:");
-console.log(process.env);
 const mysql = require("mysql2");
 
 console.log("🔍 Variáveis de ambiente do MySQL:");
@@ -12,7 +10,7 @@ console.log("MYSQL_DATABASE:", process.env.MYSQL_DATABASE);
 let connection;
 
 if (process.env.MYSQL_HOST) {
-  // Ambiente Railway
+  // Ambiente Railway: usa as variáveis fornecidas pelo serviço MySQL
   connection = mysql.createConnection({
     host: process.env.MYSQL_HOST,
     port: process.env.MYSQL_PORT,
@@ -22,7 +20,7 @@ if (process.env.MYSQL_HOST) {
   });
   console.log("🔄 Usando configuração do Railway");
 } else {
-  // Ambiente local
+  // Ambiente local (desenvolvimento)
   connection = mysql.createConnection({
     host: "127.0.0.1",
     user: "root",
@@ -35,7 +33,7 @@ if (process.env.MYSQL_HOST) {
 connection.connect((err) => {
   if (err) {
     console.error("❌ Erro ao conectar ao MySQL:", err);
-    process.exit(1);
+    process.exit(1); // Encerra o processo se não conectar (ajuda a identificar erro)
   } else {
     console.log("✅ MySQL conectado!");
   }
