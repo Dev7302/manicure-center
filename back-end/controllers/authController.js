@@ -6,6 +6,15 @@ const Cliente = require("../models/Cliente");
 const login = (req, res) => {
   const { email, senha } = req.body;
 
+  console.log('🔑 Login attempt for email:', email);
+Cliente.buscarPorEmail(email, async (err, results) => {
+  if (err) {
+    console.error('❌ Erro na query:', err);
+    return res.status(500).json({ erro: "Erro no servidor" });
+  }
+  // ...
+});
+
   Cliente.buscarPorEmail(email, async (err, results) => {
     if (err) return res.status(500).json({ erro: "Erro no servidor" });
     if (results.length === 0) {

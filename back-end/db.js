@@ -14,7 +14,6 @@ const connection = mysql.createConnection(
 connection.connect((err) => {
   if (err) {
     console.error("❌ Erro ao conectar ao MySQL:", err);
-    process.exit(1);
   } else {
     console.log("✅ MySQL conectado!");
   }
