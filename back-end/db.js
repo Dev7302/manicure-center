@@ -1,3 +1,5 @@
+console.log("🔎 Todas as variáveis de ambiente disponíveis:");
+console.log(process.env);
 const mysql = require("mysql2");
 
 console.log("🔍 Variáveis de ambiente do MySQL:");
