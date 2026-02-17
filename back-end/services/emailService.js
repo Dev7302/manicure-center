@@ -1,5 +1,8 @@
 // services/emailService.js
+console.log('📧 Carregando emailService.js');
 const { Resend } = require('resend');
+// ... resto
+
 
 // Mapeamento de serviços para nomes amigáveis
 const servicosMap = {

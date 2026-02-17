@@ -1,3 +1,4 @@
+console.log('📅 Carregando agendamentoController.js');
 const Agendamento = require("../models/Agendamento");
 
 const HORARIOS = [

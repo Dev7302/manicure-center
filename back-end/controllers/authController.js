@@ -1,6 +1,8 @@
+console.log('🔐 Carregando authController.js');
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const Cliente = require("../models/Cliente");
+
 
 // Login com email
 const login = (req, res) => {

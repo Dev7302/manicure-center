@@ -1,4 +1,6 @@
+console.log('📦 Carregando db.js');
 const mysql = require("mysql2");
+// ... restoconst mysql = require("mysql2");
 
 console.log("🔍 Usando DATABASE_URL:", process.env.DATABASE_URL ? "definida" : "não definida");
 
