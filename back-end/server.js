@@ -4,22 +4,26 @@ const cors = require("cors");
 
 const authRoutes = require("./routes/authRoutes");
 const agendamentoRoutes = require("./routes/agendamentoRoutes");
-
 const app = express();
 
-// Configuração CORS mais robusta
+// Configuração CORS explícita para aceitar seu front-end
 app.use(cors({
-    origin: '*',
+    origin: 'https://manicure-center-onik.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
 }));
+
+// Alternativa para teste (permitir todas as origens)
+// app.use(cors({ origin: '*' }));
 
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/agendamentos", agendamentoRoutes);
 
+// Use a porta fornecida pelo Railway (importante!)
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log("Servidor rodando na porta " + PORT);
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
