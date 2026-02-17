@@ -1,11 +1,13 @@
-const mysql = require("mysql2"); // Use mysql2 (já está no package.json)
+const mysql = require("mysql2");
 
-const connection = mysql.createConnection({
-  host: "127.0.0.1",
-  user: "root",
-  password: "",
-  database: "manicure_center"
-});
+const connection = mysql.createConnection(
+  process.env.DATABASE_URL || {
+    host: "127.0.0.1",
+    user: "root",
+    password: "",
+    database: "manicure_center"
+  }
+);
 
 connection.connect((err) => {
   if (err) {
