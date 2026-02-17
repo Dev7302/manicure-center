@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar - Manicure Center</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="user-info"></div>
+        <h2>📅 Agendar Horário</h2>
+        <p class="subtitle">Escolha o serviço, data e horário</p>
+
+        <div class="form-group">
+            <label for="servico">💆 Serviço:</label>
+            <select id="servico">
+                <option value="mao" data-duracao="1">👆 Mão - R$35 (1 hora)</option>
+                <option value="pe" data-duracao="1">🦶 Pé - R$40 (1 hora)</option>
+                <option value="pe_spa" data-duracao="1">💧 Pé com spa - R$75 (1 hora)</option>
+                <option value="pe_mao_sem_spa" data-duracao="2">🤝 Pé e mão sem spa - R$65 (2 horas)</option>
+                <option value="pe_mao_com_spa" data-duracao="2">✨ Pé e mão com spa - R$100 (2 horas)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="data">📆 Data:</label>
+            <input type="date" id="data" required>
+        </div>
+
+        <div id="horarios" class="horarios-container"></div>
+
+        <button id="btnConfirmar" class="btn">✅ Confirmar Agendamento</button>
+        <div id="message"></div>
+
+        <p style="text-align: center; margin-top: 20px;">
+            <a href="index.html">← Voltar</a>
+        </p>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/agendamento.js"></script>
+</body>
+</html>

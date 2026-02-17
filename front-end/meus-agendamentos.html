@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Agendamentos - Manicure Center</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .agendamento-item {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ffb3c6;
+        }
+        .cancelar-btn {
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        .cancelar-btn:hover {
+            background: #d43f5e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="user-info"></div>
+        <h2>📋 Meus Agendamentos</h2>
+        <div id="agendamentos-lista">Carregando...</div>
+        <p><a href="agendar.html">➕ Novo agendamento</a></p>
+        <p><a href="index.html">← Voltar</a></p>
+    </div>
+    <script src="js/auth.js"></script>
+    <script src="js/meus-agendamentos.js"></script>
+</body>
+</html>

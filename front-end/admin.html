@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Manicure Center</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .filtro {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .filtro input, .filtro button {
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid #ffb3c6;
+        }
+        .filtro button {
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .filtro button:hover {
+            background: #d43f5e;
+        }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ffb3c6; }
+        th { background-color: #ff4d6d; color: white; }
+        tr:hover { background-color: #ffe9f0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="user-info"></div>
+        <h2>👑 Painel Administrativo</h2>
+        <p class="subtitle">Gerencie os agendamentos</p>
+
+        <div class="filtro">
+            <label for="filtro-data">Filtrar por data:</label>
+            <input type="date" id="filtro-data">
+            <button id="btn-filtrar">Filtrar</button>
+            <button id="btn-todos">Mostrar todos</button>
+        </div>
+
+        <div id="admin-content">
+            <p>Carregando...</p>
+        </div>
+        <p><a href="index.html">← Voltar</a></p>
+    </div>
+    <script src="js/auth.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

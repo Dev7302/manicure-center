@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Manicure Center</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container" style="max-width: 500px;">
+        <h2>✨ Criar Conta</h2>
+        <p class="subtitle">Junte-se a nós e ganhe cuidados especiais</p>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="nome">👤 Nome completo:</label>
+                <input type="text" id="nome" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">📧 E-mail:</label>
+                <input type="email" id="email" placeholder="seu@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">📱 Telefone (opcional):</label>
+                <input type="tel" id="telefone" placeholder="(12) 99999-9999">
+            </div>
+            <div class="form-group">
+                <label for="senha">🔑 Senha:</label>
+                <input type="password" id="senha" placeholder="Crie uma senha" required>
+            </div>
+            <button type="submit" class="btn">Cadastrar</button>
+        </form>
+        <div id="message" class="error"></div>
+        <p style="text-align: center; margin-top: 20px;">
+            Já tem conta? <a href="login.html">Faça login</a><br>
+            <a href="index.html">← Voltar</a>
+        </p>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>

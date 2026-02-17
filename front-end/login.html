@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Manicure Center</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container" style="max-width: 500px;">
+        <h2>🔐 Bem-vinda de volta!</h2>
+        <p class="subtitle">Faça login com seu e-mail</p>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">📧 E-mail:</label>
+                <input type="email" id="email" placeholder="seu@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">🔑 Senha:</label>
+                <input type="password" id="senha" placeholder="Sua senha" required>
+            </div>
+            <button type="submit" class="btn">Entrar</button>
+        </form>
+        <div id="message" class="error"></div>
+        <p style="text-align: center; margin-top: 20px;">
+            Não tem conta? <a href="cadastro.html">Cadastre-se</a><br>
+            <a href="index.html">← Voltar</a>
+        </p>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>

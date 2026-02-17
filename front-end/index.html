@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manicure Center</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Área do usuário (login/logout) -->
+        <div id="user-info"></div>
+
+        <div class="hero">
+            <img src="img/hero-bg.jpg" alt="Mãos cuidadas" class="hero-image">
+            <h1>💅 Manicure Center</h1>
+            <p class="subtitle">Onde suas mãos e pés ganham vida!</p>
+        </div>
+
+        <!-- Botões de navegação (apenas um conjunto) -->
+        <div class="nav-buttons">
+            <a href="login.html" class="btn">Entrar</a>
+            <a href="cadastro.html" class="btn btn-outline">Criar Conta</a>
+            <a href="agendar.html" class="btn">Agendar</a>
+            <a href="meus-agendamentos.html" class="btn">Meus Agendamentos</a>
+            <!-- Link Admin (inicialmente oculto) -->
+            <div id="admin-link" style="display: none;">
+                <a href="admin.html" class="btn">Admin</a>
+            </div>
+        </div>
+
+        <h2>Nossos Serviços</h2>
+        <div class="servicos">
+            <div class="card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('img/manicure.jpg');">
+                <h3>Manicure</h3>
+                <p>1 hora de cuidado e esmaltação</p>
+                <p><strong>R$ 35</strong></p>
+            </div>
+            <div class="card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('img/pedicure.jpg');">
+                <h3>Pedicure</h3>
+                <p>1 hora de relaxamento</p>
+                <p><strong>R$ 40</strong></p>
+            </div>
+            <div class="card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('img/spa.jpg');">
+                <h3>Pé com Spa</h3>
+                <p>1 hora com esfoliação</p>
+                <p><strong>R$ 75</strong></p>
+            </div>
+            <div class="card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('img/combo.jpg');">
+                <h3>Pé e Mão sem Spa</h3>
+                <p>2 horas de mimo</p>
+                <p><strong>R$ 65</strong></p>
+            </div>
+            <div class="card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('img/combo.jpg');">
+                <h3>Pé e Mão com Spa</h3>
+                <p>2 horas completas</p>
+                <p><strong>R$ 100</strong></p>
+            </div>
+        </div>
+
+        <div class="contato">
+            <p>📞 (12) 99188-7697</p>
+            <p>📍 Rua Anésia Nunes Matarazzo, 73 - Vila Rubi</p>
+            <p>⏰ Segunda a sábado, 9h às 18h</p>
+        </div>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>
